@@ -185,7 +185,7 @@ public class HelloRpcService {
 
 定义`protobuf`
 
-```proto
+```protobuf
 syntax = "proto3";
 
 option java_package = "cn.com.siss.api";
