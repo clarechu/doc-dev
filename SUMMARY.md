@@ -4,3 +4,5 @@
 * 基础平台
   * [JAVA开发环境的搭建](basics/dev.md)
   * [Git的使用](basics/git.md)
+  * [GRPC的使用](basics/grpc.md)
+  * [Redis的使用](basics/redis.md)
