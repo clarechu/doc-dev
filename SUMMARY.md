@@ -11,4 +11,4 @@
   * [RabbitMQ的使用](basics/rabiit.md)
   * [MogoDB的使用](basics/mongo.md)
   * [Sharding-Jdbc的使用](basics/sharding-jdbc.md)
-  * [测试驱动开发(TTD)](basics/mock.md)
+  * [测试驱动开发(TDD)](basics/mock.md)
