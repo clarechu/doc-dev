@@ -10,6 +10,8 @@ Redis 与其他 key - value 缓存产品有以下三个特点：
 * Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。
 * Redis支持数据的备份，即master-slave模式的数据备份。
 
+![redis](https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/1200px-Redis_Logo.svg.png)
+
 ## Redis 优势
 
 * 性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。
