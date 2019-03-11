@@ -47,3 +47,14 @@ IDEA IDE 的安装较为简单，确实安装就行了。
 * [下载 Maven](http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)
 
 * Maven的配置
+
+将安装包下载后并解压至当前目录,设置Maven的环境变量 `MAVEN_HOME=D:\mvn\apache-maven-3.6.0`
+PATH中添加`D:\mvn\apache-maven-3.6.0\bin`
+
+验证maven是否安装成功：
+
+命令行 `mvn -v`
+
+![maven-version](img/mvn-version.png)
+
+更换maven中的 `settings.xml` 下载 [settings.xml](pkg/settings.xml) 替换解压包下的conf中的`settings.xml` 并设置环境变量`NEXUS_PATH=http://nexus.sixunyun.com.cn`。

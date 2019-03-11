@@ -1,0 +1,94 @@
+<settings>
+    <servers>
+        <server>
+             <id>nexus-releases</id>
+             <username>${env.MAVEN_NEXUS_USERNAME}</username>
+             <password>${env.MAVEN_NEXUS_PASSWORD}</password>
+         </server>
+         <server>
+             <id>nexus-snapshots</id>
+             <username>${env.MAVEN_NEXUS_USERNAME}</username>
+             <password>${env.MAVEN_NEXUS_PASSWORD}</password>
+         </server>
+    </servers>
+    <mirrors>
+		<mirror>
+            <!--This sends everything else to /public -->
+            <id>nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <url>${env.NEXUS_PATH}/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+    <profiles>
+        <profile>
+        <!-- id必须唯一 -->
+            <id>nexus-aliyun</id>
+            <repositories>
+                <repository>
+                    <!-- id必须唯一 -->
+                    <id>nexus-aliyun_1</id>
+                    <!-- 仓库的url地址 -->
+                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+                </repositories>
+        </profile>
+        <profile>
+            <id>nexus</id>
+            <properties>
+                <nexus.releases>${env.NEXUS_PATH}/repository/maven-releases/</nexus.releases>
+                <nexus.snapshots>${env.NEXUS_PATH}/repository/maven-snapshots/</nexus.snapshots>
+            </properties>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>http://repo1.maven.org/maven2</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </repository>
+                <repository>
+                    <id>nexus-snapshots</id>
+                    <name>nexus-snapshots</name>
+                    <url>${env.NEXUS_PATH}/repository/maven-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                  </repository>
+                  <repository>
+                    <id>nexus-releases</id>
+                    <name>nexus-releases</name>
+                    <url>${env.NEXUS_PATH}/repository/maven-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                  </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://repo1.maven.org/maven2</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+    </profiles>
+    <activeProfiles>
+        <!--make the profile active all the time -->
+        <activeProfile>nexus</activeProfile>
+        <activeProfile>nexus-aliyun</activeProfile>
+    </activeProfiles>
+</settings>
