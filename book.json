@@ -1,6 +1,6 @@
 {
     "gitbook": "3.2.3",
-    "title": "git-book",
+    "title": "思讯",
     "description": "",
     "author": "clare",
     "language": "zh-hans",
@@ -64,6 +64,9 @@
     "theme": "white",
     "family": "serif",
     "size": 2
+    },
+    "styles": {
+        "website": "styles/website.css"
     },
     "prism": {
     "css": [
