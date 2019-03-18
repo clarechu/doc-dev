@@ -57,4 +57,5 @@ PATH中添加`D:\mvn\apache-maven-3.6.0\bin`
 
 ![maven-version](img/mvn-version.png)
 
-更换maven中的 `settings.xml` 下载 [settings.xml](pkg/settings.xml) 替换解压包下的conf中的`settings.xml` 并设置环境变量`NEXUS_PATH=http://nexus.sixunyun.com.cn`。
+更换maven中的 `settings.xml` 下载 [settings.xml](pkg/settings.xml) 替换解压包下的conf中的`settings.xml` 并设置环境变量`NEXUS_PATH=http://nexus.sixunyun.com.cn` 
+本地环境默认使用local `SPRING_PROFILES_ACTIVE=local`。

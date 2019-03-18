@@ -48,7 +48,7 @@ Vincent Driessen提出了一个分支管理的策略，我觉得非常值得借�
 回到操作系统命令提示符下（windows用户请用git bash终端）生成ssh密钥及设置git用户信息, 注意如果你在运行ssh-keygen是设置了密码，那么你以后的git操作也要输入密码，否则这里可以直接回车，即运行ssh-keygen不使用密码。
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "zhang.san@ssi.com" 
+ssh-keygen -t rsa -C "zhang.san@ssi.com" 
 git config --global user.name "Zhang San"
 git config --global user.email "zhang.san@ssi.com"
 ```
