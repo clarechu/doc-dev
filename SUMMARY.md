@@ -14,3 +14,7 @@
   * [测试驱动开发(TDD)](basics/mock.md)
 * 运维操作手册
   * [本地YUM源搭建](ops/yum.md)
+  
+* 基础服务信息
+  * [阿里测试环境](serviceinfo/dev.md)
+  
