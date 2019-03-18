@@ -12,3 +12,5 @@
   * [MogoDB的使用](basics/mongo.md)
   * [Sharding-Jdbc的使用](basics/sharding-jdbc.md)
   * [测试驱动开发(TDD)](basics/mock.md)
+* 运维操作手册
+  * [本地YUM源搭建](ops/yum.md)
