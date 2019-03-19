@@ -13,6 +13,7 @@
   * [Sharding-Jdbc的使用](basics/sharding-jdbc.md)
   * [测试驱动开发(TDD)](basics/mock.md)
 * 运维操作手册
+  * [系统标准化](ops/standard.md)
   * [本地YUM源搭建](ops/yum.md)
   
 * 基础服务信息
