@@ -57,7 +57,7 @@ vim /etc/crontab
 
    ```bash
    vim /etc/yum.repos.d/local.repo
-   
+
    [centos-base]
    name=CentOS-Base
    baseurl=http://128.0.100.170/base/
