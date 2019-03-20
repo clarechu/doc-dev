@@ -7,7 +7,6 @@ echo "nameserver 172.18.171.112" >> /etc/resolv.conf
 # 另外需要将网卡配置加上本地DNS配置，防止重启丢失DNS
 ```
 
-
 ## 内核参数调整
 
 ```bash
@@ -62,6 +61,7 @@ mount -a
 ```
 
 ## Docker默认参数修改
+
 ```bash
 vim /etc/docker/daemon.json
 {
@@ -87,7 +87,7 @@ vim /etc/security/limits.conf
 ## 系统日志收集与调整
 
 - 限制默认`journald`产生的日志大小，防止撑爆磁盘
-  
+
 ```bash
 vim /etc/systemd/journald.conf
 SystemMaxUse=50M
@@ -108,4 +108,5 @@ systemctl restart rsyslog
 ## Ansible公钥预存放
 
 ## 脚本下载
+
 [centos7_init.sh](./pkg/centos7_init.sh)
