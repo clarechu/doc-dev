@@ -26,7 +26,5 @@
 打开终端命令行窗口，执行`ping mysql-dev`,应该会自动将`mysql-dev`转换为`mysql-dev.siss.io`该域名，并正确返回IP地址
 ![ping](img/ping.jpg)
 
-
 附:
-![开发环境信息](../serviceinfo/dev.md)
-![开发环境信息](../serviceinfo/dev.md)
+[开发环境信息](../serviceinfo/dev.md)
