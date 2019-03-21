@@ -1,50 +1,45 @@
-# 阿里开发环境基础服务信息列表
+# 阿里测试环境基础服务信息
 
-- MySQL
-  - Version: 5.7
-  - User: admin
-  - Password: sisso2o@2019
-  - FQDN: mysql-test.siss.io/mysql-test-ro.siss.io
-  - 172.18.171.110/47.107.53.208  主
-  - 172.18.171.111/47.112.194.235 从
-
-- RabbitMQ
-  - Version: 3.6
-  - User: guest
-  - Password: guest
-  - FQDN: rabbit-test.siss.io
-  - 172.18.171.110/47.107.53.208
-  - 172.18.171.111/47.112.194.235
-  - 172.18.171.113/47.112.192.62
+- MongoDB复制集
   
-- Kafka
-  - Version: 2.12
-  - FQDN:  kafka-test.siss.io
-  - 172.18.171.110/47.107.53.208
-  - 172.18.171.111/47.112.194.235
-  - 172.18.171.113/47.112.192.62
+  - 版本: v3.6
+  
+  - DNS: mongo-test-1,mongo-test-2,mongo-test-3
 
-- MongoDB
-  - Version: 3.6
-  - User: admin
-  - Password: siss.admin.mongo
-  - DB: siss
-  - FQDN: mongo-test.siss.io/mongo-test-ro.siss.io
-  - 172.18.171.110/47.107.53.208  主
-  - 172.18.171.111/47.112.194.235 从
-  - 172.18.171.113/47.112.192.62  从
+  - 数据库名称: siss
 
-- Elasticsearch
-  - Version: 5.6
-  - FQDN: es-test.siss.io
-  - 172.18.171.110/47.107.53.208
-  - 172.18.171.111/47.112.194.235
-  - 172.18.171.113/47.112.192.62
+  - 连接帐号/密码: admin/siss.admin.mongo
+  
+- MySQL主从集群
+  
+  - 版本: v5.7
+  
+  - DNS(主): mysql-test
+  
+  - DNS(从): mysql-test-ro
 
-- Redis
-  - Version: 4
-  - Password: 123456
-  - FQDN: redis-test.siss.io
-  - 172.18.171.110/47.107.53.208  主
-  - 172.18.171.111/47.112.194.235 从
-  - 172.18.171.113/47.112.192.62  从
+  - 数据库名称: siss
+  
+  - 连接帐号/密码: siss/siss.root.mysql
+
+- RabbitMQ集群
+  
+  - 版本: v3.6
+  
+  - DNS: rabbit-test
+
+  - 连接帐号/密码: guest/guest
+  
+- Elastcisearch集群
+  
+  - 版本: 5.6
+  
+  - DNS: es-test
+
+- Kafka集群
+  
+  - 版本: 2.12
+
+  - DNS: kafka-test
+
+未提供帐号信息的,表示可以直连,通过防火墙进行安全管控
