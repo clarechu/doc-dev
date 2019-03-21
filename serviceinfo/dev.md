@@ -28,7 +28,7 @@
   
   - DNS: rabbit-dev
 
-  - 连接帐号/密码: guest/guest
+  - 连接帐号/密码: guest/siss.rabbit.dev
   
 - Elastcisearch集群
   
