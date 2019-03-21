@@ -12,10 +12,13 @@
   * [MogoDB的使用](basics/mongo.md)
   * [Sharding-Jdbc的使用](basics/sharding-jdbc.md)
   * [测试驱动开发(TDD)](basics/mock.md)
+  
+* 帮助文档
+  * [本地开发环境增加默认搜索域](ops/use_dns.md)
 * 运维操作手册
   * [系统标准化](ops/standard.md)
   * [本地YUM源搭建](ops/yum.md)
   
 * 基础服务信息
-  * [阿里测试环境](serviceinfo/dev.md)
-  
+  * [本地开发环境](serviceinfo/dev.md)
+  * [阿里测试环境](serviceinfo/test.md)
