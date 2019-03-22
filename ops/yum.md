@@ -76,6 +76,12 @@ vim /etc/crontab
    enable=1
    gpgcheck=0
 
+   [centos-epel]
+   name=CentOS-EPEL
+   baseurl=http://128.0.100.170/epel/
+   enable=1
+   gpgcheck=0
+
    [docker-ce]
    name=Docker-CE
    baseurl=http://128.0.100.170/docker-ce/
