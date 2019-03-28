@@ -3,7 +3,8 @@
 ## 使用内部DNS服务器
 
 ```bash
-echo "nameserver 172.18.171.112" >> /etc/resolv.conf
+echo  "nameserver 172.18.171.113" > /etc/resolv.conf
+echo  "nameserver 172.18.171.109" >> /etc/resolv.conf
 # 另外需要将网卡配置加上本地DNS配置，防止重启丢失DNS
 ```
 
