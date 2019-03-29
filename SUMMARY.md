@@ -19,6 +19,7 @@
 * 运维操作手册
   * [系统标准化](ops/standard.md)
   * [本地YUM源搭建](ops/yum.md)
+  * [阿里云K8S主机标准化](ops/k8s-node.md)
   
 * 基础服务信息
   * [本地开发环境](serviceinfo/dev.md)
