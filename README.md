@@ -16,3 +16,4 @@
 |2019-03-12|使用SpringBoot Sharding-jdbc的使用|clare|
 |2019-03-12|面向测试驱动开发（TDD）|clare|
 |2019-03-12|SpringBoot 事务的处理|clare|
+|2019-03-28|validate 数据校验|clare|

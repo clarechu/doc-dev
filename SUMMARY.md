@@ -12,6 +12,7 @@
   * [MogoDB的使用](basics/mongo.md)
   * [Sharding-Jdbc的使用](basics/sharding-jdbc.md)
   * [测试驱动开发(TDD)](basics/mock.md)
+  * [数据校验](basics/validate.md)
   
 * 帮助文档
   * [本地开发环境增加默认搜索域](ops/use_dns.md)
