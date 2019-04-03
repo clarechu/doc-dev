@@ -61,8 +61,8 @@ config.toml
 ```yaml
 # 完整可用配置项
 # https://docs.gitlab.com/runner/configuration/advanced-configuration.html
-# 并发限制，限制同时工作的数量，0为禁用
-concurrent = 0
+# 并发限制，限制同时工作的数量
+concurrent = 100
 check_interval = 0
 
 [session_server]
