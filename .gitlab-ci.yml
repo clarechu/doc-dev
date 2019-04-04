@@ -6,7 +6,7 @@ services:
 
 stages:
   - gitbook
-
+  
 befor_script:
   - export DOCKER_HOST=${DOCKER_PORT}
   - docker info
