@@ -10,7 +10,7 @@ before_script:
 build:
   stage: gitbook
   script:
-    - cd /data/gitbook && docker-compose down
+    - cd /data/gitbook && docker-compose down && cd -
     - rm -rf _book
     - docker images |grep clarechu/git-book |awk '{print $3}' |xargs docker rmi || echo "No Images delete"
     - gitbook build
