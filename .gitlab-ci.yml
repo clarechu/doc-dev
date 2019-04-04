@@ -11,6 +11,7 @@ build:
   stage: gitbook
   script:
     - cd /data/gitbook && docker-compose down
+    - rm -rf _book
     - docker rmi clarechu/git-book:1.0
     - gitbook build
     - docker build -t clarechu/git-book:1.0 .
