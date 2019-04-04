@@ -24,3 +24,4 @@
 * 基础服务信息
   * [本地开发环境](serviceinfo/dev.md)
   * [阿里测试环境](serviceinfo/test.md)
+  * [测试CI/CD](serviceinfo/dev.md)
