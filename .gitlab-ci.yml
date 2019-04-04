@@ -13,6 +13,7 @@ build:
     - cd /data/gitbook && docker-compose down && cd -
     - rm -rf _book
     - docker images |grep clarechu/git-book |awk '{print $3}' |xargs docker rmi || echo "No Images delete"
+    - gitbook install
     - gitbook build
     - docker build -t clarechu/git-book:1.0 .
     - cd /data/gitbook && docker-compose up -d
