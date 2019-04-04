@@ -10,7 +10,9 @@ before_script:
 build:
   stage: gitbook
   script:
-    - pwd 
-    - ls -al
+    - sh build.sh
+    - cd /data/gitbook && docker-compose down
+    - docker rmi clarechu/git-book:1.0
+    - cd /data/gitbook && docker-compose up -d
   tags:
     - shell
