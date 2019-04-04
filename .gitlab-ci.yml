@@ -7,11 +7,10 @@ stages:
 before_script:
   - docker info
 
-only:
-  - development
-
 build:
   stage: gitbook
+  only:
+    - development
   script:
     - cd /data/gitbook && docker-compose down && cd -
     - rm -rf _book
