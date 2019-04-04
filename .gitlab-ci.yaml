@@ -5,17 +5,17 @@ services:
   - docker:dind
 
 stages:
-  - build
+  - gitbook
 
-build:build_image:
-  stage: build
+build_image:
+  stage: gitbook
   image: docker:stable-dind
   only:
     - development
-    
+    - ops
+
   script:
     - pwd 
     - ls -al
   tags:
     - docker
-
