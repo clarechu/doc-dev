@@ -8,8 +8,7 @@ stages:
   - gitbook
 
 before_script:
-  - export DOCKER_HOST=${DOCKER_PORT}
-  - docker login -u ${DOCKER_ENV_USER} -p ${DOCKER_ENV_PASS}  ${REGISTRY}
+  - docker info
 
 build_image:
   stage: gitbook
@@ -22,4 +21,4 @@ build_image:
     - pwd 
     - ls -al
   tags:
-    - docker
+    - shell
