@@ -7,6 +7,10 @@ services:
 stages:
   - gitbook
 
+befor_script:
+  - export DOCKER_HOST=${DOCKER_PORT}
+  - docker info
+
 build_image:
   stage: gitbook
   image: docker:stable-dind
@@ -17,6 +21,5 @@ build_image:
   script:
     - pwd 
     - ls -al
-    - docker info
   tags:
     - docker
