@@ -9,11 +9,11 @@ stages:
 
 before_script:
   - export DOCKER_HOST=${DOCKER_PORT}
-  - docker info
+  - docker login -u ${DOCKER_ENV_USER} -p ${DOCKER_ENV_PASS}  ${REGISTRY}
 
 build_image:
   stage: gitbook
-  image: docker:stable-dind
+  image: alpine
   only:
     - development
     - ops
