@@ -12,7 +12,7 @@ build:build_image:
   image: docker:stable-dind
   only:
     - development
-  
+    
   script:
     - pwd 
     - ls -al
