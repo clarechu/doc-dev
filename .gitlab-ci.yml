@@ -1,22 +1,14 @@
 variables:
   REGISTRY: "registry-vpc.cn-shenzhen.aliyuncs.com/siss"
 
-services:
-  - docker:dind
-
 stages:
   - gitbook
 
 before_script:
   - docker info
 
-build_image:
+build:
   stage: gitbook
-  image: alpine
-  only:
-    - development
-    - ops
-
   script:
     - pwd 
     - ls -al
