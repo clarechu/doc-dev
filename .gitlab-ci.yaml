@@ -1,0 +1,20 @@
+variables:
+  REGISTRY: "registry-vpc.cn-shenzhen.aliyuncs.com/siss"
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+build:build_image:
+  stage: build
+  image: docker:stable-dind
+  only:
+    - development
+  script:
+    - pwd 
+    - ls -al
+  tags:
+    - docker
+
