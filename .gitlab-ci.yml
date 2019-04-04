@@ -4,9 +4,6 @@ variables:
 services:
   - docker:dind
 
-before_script:
-  - docker info
-
 stages:
   - gitbook
 
@@ -20,5 +17,6 @@ build_image:
   script:
     - pwd 
     - ls -al
+    - docker info
   tags:
     - docker
