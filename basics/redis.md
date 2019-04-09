@@ -41,7 +41,7 @@ Redis 与其他 key - value 缓存产品有以下三个特点：
 spring:
   profiles:
     include:
-      - redis-sentry
+      - redis
 app:
   redis:
     host: redis-dev-3 # redis 服务端ip地址
