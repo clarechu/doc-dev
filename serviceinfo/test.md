@@ -42,4 +42,12 @@
 
   - DNS: kafka-test
 
+- Redis哨兵模式集群
+  
+  - 版本: 4
+
+  - DNS: redis-test-1/redis-test-2/redis-test-3
+  
+  - Pass: redis.123
+
 未提供帐号信息的,表示可以直连,通过防火墙进行安全管控
