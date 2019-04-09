@@ -45,8 +45,15 @@
 - Redis哨兵模式集群
   
   - 版本: 4
-
-  - DNS: redis-dev-1/redis-dev-2/redis-dev-3
-  - Pass:  redis.123
   
+  - DNS: redis-dev-1/redis-dev-2/redis-dev-3
+  
+  - Pass:  redis.123
+
+- FastDFS集群
+  
+  - 版本: v1.0
+
+  - DNS： fastdfs-dev
+
 以上信息未提供用户名与密码的,表示可以直连.目前以上环境只允许公司内网环境(128.0.0.0/16)连接.
