@@ -45,7 +45,12 @@ Mybatis-Plus（简称MP）是一个 Mybatis 的增强工具，在 Mybatis 的基
 
 扫描实体类（entity）和 数据库（mapper）包路径
 
-```yaml
+```yml
+
+spring:
+  profiles:
+    include:
+      - mybatisplus-rws
 mybatis:
   typeAliasesPackage: "cn.com.siss.web.entity"
   #checkConfig-location : false
