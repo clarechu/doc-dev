@@ -82,3 +82,55 @@ public class HelloWorld {
         RedisTemplateUtil.hmSet(redisTemplate, "s", "a", "b");
     }
 ```
+
+### 使用Redis注解方式插入缓存
+
+```text
+cacheNames = "product"   //缓存名
+
+key = "固定值" 或  key = "#sellerid"(可变化的值)  //redis缓存中的key
+
+condition = "#sellerid.length > 10"   //里面填写表达式，true表示进行缓存，false表示不进行缓存
+
+unless = "#result.getCode() != 0"   //和以上相反，当为false时进行缓存，否则不进行缓存
+```
+
+
+使用注解的方式更新缓存
+```java
+@Cacheable(value="user", key="'users_'+#id")
+public User redis(Long id){
+    User user = new User();
+    user.setUsername("hlhdidi");
+    user.setPassword("123");
+    user.setUid(1);
+    user.setId(1L);
+    System.out.println("log4j2坏啦?");
+    return user;
+}
+```
+
+@CacheEvict 删除缓存  
+
+allEntries = false  清空product里面的所有制
+
+allEntries = true  默认值，删除key对应的值
+
+
+```java
+@CacheEvict(value="thisredis", key="'users_'+#id",condition="#id!=1")
+public void delUser(Integer id) {
+    // 删除user
+    System.out.println("user删除");
+}
+```
+
+@CachePut
+
+每次执行都会执行方法，无论缓存里是否有值，同时使用新的返回值的替换缓存中的值。这里不同于@Cacheable：@Cacheable如果缓存没有值，从则执行方法并缓存数据，如果缓存有值，则从缓存中获取值
+
+ 
+
+@CacheConfig
+
+@CacheConfig: 类级别的注解：如果我们在此注解中定义cacheNames，则此类中的所有方法上 @Cacheable的cacheNames默认都是此值。当然@Cacheable也可以重定义cacheNames的值
