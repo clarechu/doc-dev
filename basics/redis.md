@@ -35,11 +35,32 @@ Redis 与其他 key - value 缓存产品有以下三个特点：
 
 添加`application.yml`的配置文件
 
-```java
+单节点redis
+
+```yml
+spring:
+  profiles:
+    include:
+      - redis-sentry
 app:
   redis:
-    host: 172.16.0.2 # redis 服务端ip地址
-    password: 123456 # redis 登录密码
+    host: redis-dev-3 # redis 服务端ip地址
+    password: redis.123 # redis 登录密码
+```
+
+
+哨兵模式
+
+```yml
+app:
+  redis:
+    password: redis.123
+    nodes: redis-dev-1:26379,redis-dev-2:26379,redis-dev-3:26379
+spring:
+  profiles:
+    include:
+      - redis-sentry
+
 ```
 
 添加string类型 首先通过注解`@Autowired` 注入redisTemplate.
