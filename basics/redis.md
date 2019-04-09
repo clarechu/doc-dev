@@ -85,6 +85,20 @@ public class HelloWorld {
 
 ### 使用Redis注解方式插入缓存
 
+开启注释方式的redis
+
+```java
+@SpringBootApplication
+@EnableCaching
+public class SpringBootStarterRedisApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootStarterRedisApplication.class, args);
+    }
+
+}
+```
+
 ```text
 cacheNames = "product"   //缓存名
 
