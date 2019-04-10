@@ -15,7 +15,8 @@
 * 开发规范
   * [测试驱动开发(TDD)](basics/mock.md)
   * [数据校验](basics/validate.md)
-  * [Swagger2](standard/Swagger2.md)
+  * [Swagger2](standard/swagger2.md)
+  * [日志记录及GELF的集成](standard/logging.md)
 * 帮助文档
   * [本地开发环境增加默认搜索域](ops/use_dns.md)
 * 运维操作手册
