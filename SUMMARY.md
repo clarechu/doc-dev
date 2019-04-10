@@ -1,9 +1,10 @@
 # 目录
 
 * [介绍](README.md)
-* 基础平台
+* 基础环境搭建
   * [JAVA开发环境的搭建](basics/dev.md)
   * [Git的使用](basics/git.md)
+* 基础平台
   * [GRPC的使用](basics/grpc.md)
   * [Redis的使用](basics/redis.md)
   * [Mybatis-plus的使用](basics/mybatis-plus.md)
@@ -11,9 +12,10 @@
   * [RabbitMQ的使用](basics/rabiit.md)
   * [MogoDB的使用](basics/mongo.md)
   * [Sharding-Jdbc的使用](basics/sharding-jdbc.md)
+* 开发规范
   * [测试驱动开发(TDD)](basics/mock.md)
   * [数据校验](basics/validate.md)
-  
+  * [Swagger2](standard/Swagger2.md)
 * 帮助文档
   * [本地开发环境增加默认搜索域](ops/use_dns.md)
 * 运维操作手册

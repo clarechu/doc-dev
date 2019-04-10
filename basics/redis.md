@@ -37,7 +37,7 @@ Redis 与其他 key - value 缓存产品有以下三个特点：
 
 单节点redis
 
-```yml
+```yaml
 spring:
   profiles:
     include:
@@ -51,7 +51,7 @@ app:
 
 哨兵模式
 
-```yml
+```yaml
 app:
   redis:
     password: redis.123
@@ -120,7 +120,7 @@ public class SpringBootStarterRedisApplication {
 }
 ```
 
-```text
+```
 cacheNames = "product"   //缓存名
 
 key = "固定值" 或  key = "#sellerid"(可变化的值)  //redis缓存中的key
@@ -132,6 +132,7 @@ unless = "#result.getCode() != 0"   //和以上相反，当为false时进行�
 
 
 使用注解的方式更新缓存
+
 ```java
 @Cacheable(value="user", key="'users_'+#id")
 public User redis(Long id){
@@ -151,7 +152,6 @@ allEntries = false  清空product里面的所有制
 
 allEntries = true  默认值，删除key对应的值
 
-
 ```java
 @CacheEvict(value="thisredis", key="'users_'+#id",condition="#id!=1")
 public void delUser(Integer id) {
@@ -163,8 +163,6 @@ public void delUser(Integer id) {
 @CachePut
 
 每次执行都会执行方法，无论缓存里是否有值，同时使用新的返回值的替换缓存中的值。这里不同于@Cacheable：@Cacheable如果缓存没有值，从则执行方法并缓存数据，如果缓存有值，则从缓存中获取值
-
- 
 
 @CacheConfig
 
